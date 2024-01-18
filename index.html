@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosso Dia 17</title>
+</head>
+
+<body>
+    <div id="conteudo">
+        <h2>Eu te amo muito mesmo, parabéns para nós, ficou feliz com todas as surpresas?? E você me ama tbm???</h2>
+        <div style="margin: auto;width: 170px;">
+            <button style="position: fixed;display: block;" class="btn" onclick="sim()">SIM</button>
+            <button class="btn" onclick="desvia(this)" onmouseover="desvia(this)" style="position: absolute;">NÃO</button>
+        </div>
+        <div class="home-img">
+            <img src="img/eueela.png" alt="imagem do cartao">
+        </div>
+    </div>
+</body>
+<style>
+    #conteudo {
+        background: #ff7a7a;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 10px;
+        text-align: center;
+        font-family: sans-serif;
+    }
+
+    .btn {
+        background: black;
+        color: white;
+        border: none;
+        padding: 10px;
+        width: 80px;
+        border-radius: 5px;
+    }
+
+    .home-img img{
+    max-width: 100%;
+    width: 400px;
+    height: auto;
+    border-radius: 25rem 15rem; 
+    }
+</style>
+
+<script>
+    function sim() {
+        alert("Você ficou feliz com as surpresas, tbm estou happy e tbm te amo! :)");
+        // redireciona para um URL após clicar no SIM
+        location.href = "/index2.html";
+    }
+
+    function desvia(btn) {
+        // btn declarado na função
+        btn.style.position = 'absolute';
+        btn.style.bottom = geraPosicao(10, 90);
+        btn.style.left = geraPosicao(10, 90);
+        console.log('opa, desviei...');
+    }
+
+    function geraPosicao(min, max) {
+        return (Math.random() * (max - min) + min) + "%";
+    }
+
+</script>
+
+</html>
